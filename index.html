@@ -2,8 +2,26 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      function add() {
+        let counter = document.getElementById("counter");
+        let value = Number(counter.innerHTML);
+        value += 1;
+        counter.innerHTML = String(value);
+      }
+      function minus() {
+        let counter = document.getElementById("counter");
+        let value = Number(counter.innerHTML);
+        value -= 1;
+        counter.innerHTML = String(value);
+      }
+    </script>
   </head>
   <body>
-    <div><p>hello!</p></div>
+    <div>
+      <button onclick="minus()">-</button>
+      <p id="counter">0</p>
+      <button onclick="add()">+</button>
+    </div>
   </body>
 </html>
